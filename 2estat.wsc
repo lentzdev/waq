@@ -1,0 +1,85 @@
+info("01-11-1993 00:00:00","31-01-1994 23:59:59","2:283/512@fidonet.org","2e Kamer Verkiezingspeiling - statistiek");
+store stem;
+intern res, count, tmp;
+/*intern reden_niet, reden_gewoonte, reden_bewust, reden_protest, reden_strategisch;*/
+intern stem_cda, stem_pvda, stem_vvd, stem_d66, stem_gl, stem_kr, stem_sp, stem_cd, stem_blanko;
+
+#define SEQ_CLS         "\014"
+#define SEQ_BLACK       "\026\001\000"
+#define SEQ_BLUE        "\026\001\001"
+#define SEQ_GREEN       "\026\001\002"
+#define SEQ_CYAN        "\026\001\003"
+#define SEQ_RED         "\026\001\004"
+#define SEQ_MAGENTA     "\026\001\005"
+#define SEQ_BROWN       "\026\001\006"
+#define SEQ_GRAY        "\026\001\007"
+#define SEQ_GREY        "\026\001\007"
+#define SEQ_LBLACK      "\026\001\010"
+#define SEQ_LBLUE       "\026\001\011"
+#define SEQ_LGREEN      "\026\001\012"
+#define SEQ_LCYAN       "\026\001\013"
+#define SEQ_LRED        "\026\001\014"
+#define SEQ_LMAGENTA    "\026\001\015"
+#define SEQ_YELLOW      "\026\001\016"
+#define SEQ_WHITE       "\026\001\017"
+#define SEQ_YELONBLUE   "\026\001\036"
+#define SEQ_BLINK       "\026\002"
+
+{
+        puts(SEQ_CLS);
+        puts(SEQ_WHITE "Tussentijdse cijfers van de 2e kamer verkiezingspeiling....\n");
+        puts(SEQ_WHITE "(De uiteindelijke statistiek zal uitgebreider zijn)\n");
+        puts("\n");
+
+        if (read(0) < 0) {
+           puts("Kan de antwoordfile niet openen.\n");
+           quit();
+        }
+
+        count = 0;
+        stem_cda = stem_pvda = stem_vvd = stem_d66 = 0;
+        stem_gl = stem_kr = stem_sp = stem_cd = stem_blanko = 0;
+
+        for (res = read(0); res > 0; res = read(1)) {
+            puts("#"); puti(++count); puts("\r");
+            if      (stem == 1) stem_cda++;
+            else if (stem == 2) stem_pvda++;
+            else if (stem == 3) stem_vvd++;
+            else if (stem == 4) stem_d66++;
+            else if (stem == 5) stem_gl++;
+            else if (stem == 6) stem_kr++;
+            else if (stem == 7) stem_sp++;
+            else if (stem == 8) stem_cd++;
+            else if (stem == 9) stem_blanko++;
+        }
+
+        if (res < 0) {
+           puts("Fout bij het lezen van de antwoordfile.\n");
+           quit();
+        }
+        read(-1);
+
+        puts(SEQ_YELLOW   "CDA           " SEQ_GREY "..." SEQ_LGREEN " "); tmp = stem_cda; call i3;
+        puts(SEQ_YELLOW "\nPvdA          " SEQ_GREY "..." SEQ_LGREEN " "); tmp = stem_pvda; call i3;
+        puts(SEQ_YELLOW "\nVVD           " SEQ_GREY "..." SEQ_LGREEN " "); tmp = stem_vvd; call i3;
+        puts(SEQ_YELLOW "\nD'66          " SEQ_GREY "..." SEQ_LGREEN " "); tmp = stem_d66; call i3;
+        puts(SEQ_YELLOW "\nGroen Links   " SEQ_GREY "..." SEQ_LGREEN " "); tmp = stem_gl; call i3;
+        puts(SEQ_YELLOW "\nKlein Rechts  " SEQ_GREY "..." SEQ_LGREEN " "); tmp = stem_kr; call i3;
+        puts(SEQ_YELLOW "\nSoc.Partij    " SEQ_GREY "..." SEQ_LGREEN " "); tmp = stem_sp; call i3;
+        puts(SEQ_YELLOW "\nCD            " SEQ_GREY "..." SEQ_LGREEN " "); tmp = stem_cd; call i3;
+        puts(SEQ_YELLOW "\nBlanko stem   " SEQ_GREY "..." SEQ_LGREEN " "); tmp = stem_blanko; call i3;
+        puts(SEQ_CYAN   "\n=====================");
+        puts(SEQ_YELLOW "\nStemmentotaal " SEQ_GREY "..." SEQ_LGREEN " "); tmp = count; call i3;
+        puts("\n\n");
+
+        quit();
+
+i3:     if      (tmp <  10) puts("  ");
+        else if (tmp < 100) putc(' ');
+        puti(tmp);
+        return;
+}
+
+
+/* end of 2estat.wsc */
+

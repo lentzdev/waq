@@ -1,0 +1,63 @@
+info("01-11-1993 00:00:00","31-12-1993 23:59:59","2:283/512@fidonet.org","2e Kamer Verkiezingspeiling");
+store stem;
+
+#define SEQ_CLS         "\014"
+#define SEQ_BLACK       "\026\001\000"
+#define SEQ_BLUE        "\026\001\001"
+#define SEQ_GREEN       "\026\001\002"
+#define SEQ_CYAN        "\026\001\003"
+#define SEQ_RED         "\026\001\004"
+#define SEQ_MAGENTA     "\026\001\005"
+#define SEQ_BROWN       "\026\001\006"
+#define SEQ_GRAY        "\026\001\007"
+#define SEQ_GREY        "\026\001\007"
+#define SEQ_LBLACK      "\026\001\010"
+#define SEQ_LBLUE       "\026\001\011"
+#define SEQ_LGREEN      "\026\001\012"
+#define SEQ_LCYAN       "\026\001\013"
+#define SEQ_LRED        "\026\001\014"
+#define SEQ_LMAGENTA    "\026\001\015"
+#define SEQ_YELLOW      "\026\001\016"
+#define SEQ_WHITE       "\026\001\017"
+#define SEQ_YELONBLUE   "\026\001\036"
+#define SEQ_BLINK       "\026\002"
+
+{
+        puts(SEQ_CLS);
+        puts(SEQ_WHITE "De WAQ software is zodanig ontworpen dat de user absoluut anoniem blijft\n");
+        puts(SEQ_WHITE "bij het beantwoorden van vragen. Zelfs de sysop kan niet spieken.\n");
+        puts("\n");
+        puts(SEQ_LRED "Als er nu 2e-kamer verkiezingen zouden worden gehouden,\n");
+        puts(SEQ_LRED "op welke partij zou je dan stemmen? (N.B. blanko mag ook!)\n");
+        puts(SEQ_YELLOW "  1 " SEQ_GREY "..." SEQ_LGREEN " CDA\n");
+        puts(SEQ_YELLOW "  2 " SEQ_GREY "..." SEQ_LGREEN " PvdA\n");
+        puts(SEQ_YELLOW "  3 " SEQ_GREY "..." SEQ_LGREEN " VVD\n");
+        puts(SEQ_YELLOW "  4 " SEQ_GREY "..." SEQ_LGREEN " D'66\n");
+        puts(SEQ_YELLOW "  5 " SEQ_GREY "..." SEQ_LGREEN " Groen Links\n");
+        puts(SEQ_YELLOW "  6 " SEQ_GREY "..." SEQ_LGREEN " Klein Rechts\n");
+        puts(SEQ_YELLOW "  7 " SEQ_GREY "..." SEQ_LGREEN " Socialistische Partij\n");
+        puts(SEQ_YELLOW "  8 " SEQ_GREY "..." SEQ_LGREEN " CD\n");
+        puts(SEQ_YELLOW "  9 " SEQ_GREY "..." SEQ_LGREEN " Blanko stem\n");
+        puts("\n");
+        puts(SEQ_WHITE "Maak je keuze: ");
+again_stem:
+        puts(SEQ_CYAN);
+        stem = geti(0);
+        puts(SEQ_WHITE);
+        if (stem < 1 || stem > 9) {
+           puti(stem);
+           puts("? Alleen 1-9 mogelijk, probeer opnieuw: ");
+           goto again_stem;
+        }
+        puts("\n");
+
+        puts(SEQ_CLS);
+        puts("Bedankt voor het meedoen!\n");
+        puts(SEQ_YELLOW);
+        puts("(De lopende uitkomsten zie je verderop in het BBS!)\n");
+        end();
+}
+
+
+/* end of 2ekamer.wsc */
+

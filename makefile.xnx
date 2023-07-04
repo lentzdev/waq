@@ -1,0 +1,22 @@
+CFLAGS	= -O -DXENIX -DANSIC
+
+WAQCOMP  = waqcomp.o crc32.o
+WAQDIS	 = waqdis.o crc32.o
+WAQUEST  = waquest.o crc32.o
+
+all:	waqcomp waqdis
+
+COBJS	=	$(WAQCOMP) $(WAQDIS) $(WAQUEST)
+
+waqcomp: $(WAQCOMP)
+	     $(CC) -o waqcomp $(WAQCOMP)
+
+waqdis:  $(WAQDIS)
+	     $(CC) -o waqdis $(WAQDIS)
+
+waquest: $(WAQUEST)
+	     $(CC) -o waquest $(WAQUEST)
+
+$(COBJS):    waq.h
+
+# end of WAQ makefile

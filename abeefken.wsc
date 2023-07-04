@@ -1,0 +1,54 @@
+info("13-04-1992 00:00:00","20-04-1992 23:59:59","2:283/512@fidonet.org","Aardbeving kennistest");
+store q1;
+
+#define SEQ_CLS         "\014"
+#define SEQ_BLACK       "\026\001\000"
+#define SEQ_BLUE        "\026\001\001"
+#define SEQ_GREEN       "\026\001\002"
+#define SEQ_CYAN        "\026\001\003"
+#define SEQ_RED         "\026\001\004"
+#define SEQ_MAGENTA     "\026\001\005"
+#define SEQ_BROWN       "\026\001\006"
+#define SEQ_GRAY        "\026\001\007"
+#define SEQ_GREY        "\026\001\007"
+#define SEQ_LBLACK      "\026\001\010"
+#define SEQ_LBLUE       "\026\001\011"
+#define SEQ_LGREEN      "\026\001\012"
+#define SEQ_LCYAN       "\026\001\013"
+#define SEQ_LRED        "\026\001\014"
+#define SEQ_LMAGENTA    "\026\001\015"
+#define SEQ_YELLOW      "\026\001\016"
+#define SEQ_WHITE       "\026\001\017"
+#define SEQ_YELONBLUE   "\026\001\036"
+#define SEQ_BLINK       "\026\002"
+
+{
+        puts(SEQ_LRED "Waar is volgens jou de veiligste plek tijdens een aardbeving?\n");
+        puts(SEQ_YELLOW "  A " SEQ_GREY "..." SEQ_LGREEN " Buiten, midden op straat\n");
+        puts(SEQ_YELLOW "  B " SEQ_GREY "..." SEQ_LGREEN " In de kelder\n");
+        puts(SEQ_YELLOW "  C " SEQ_GREY "..." SEQ_LGREEN " Op het dak\n");
+        puts(SEQ_YELLOW "  D " SEQ_GREY "..." SEQ_LGREEN " In een deuropening\n");
+        puts(SEQ_YELLOW "  E " SEQ_GREY "..." SEQ_LGREEN " Onder een tafel of bed\n");
+        puts(SEQ_YELLOW "  F " SEQ_GREY "..." SEQ_LGREEN " Maakt niet uit, is allemaal even gevaarlijk\n");
+        puts(SEQ_YELLOW "  G " SEQ_GREY "..." SEQ_LGREEN " Geen idee\n");
+        puts("\n");
+        puts(SEQ_WHITE "Maak je keuze: ");
+again1: puts(SEQ_CYAN);
+        q1 = getc(0);
+        puts(SEQ_WHITE);
+        if (q1 < 'A' || q1 > 'G') {
+           putc(q1);
+           puts("? Alleen A-G mogelijk, probeer opnieuw: ");
+           goto again1;
+        }
+        puts("\n");
+
+        puts("Bedankt voor het meedoen!\n");
+        puts(SEQ_YELLOW);
+        puts("(Binnenkort volgt de uitslag en het juiste antwoord)\n");
+        end();
+}
+
+
+/* end of abeefken.wsc */
+

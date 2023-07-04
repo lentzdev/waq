@@ -1,0 +1,81 @@
+WAQCOMP version = 1.00
+Format revision = 1
+Sourcefile      = abeefsta.wsc
+Compile stamp   = Sun 27 Sep 1992 15:01:59
+Script name     = abeefsta
+Script desc     = Aardbeving statistiek script
+Start date      = Mon 13 Apr 1992 00:00:00 GMT/UTC
+End date        = Fri 30 Oct 1992 01:59:59 GMT/UTC
+Return dest     = 2:283/512@fidonet.org
+Arc list        = ZIP,LHarc,LH113,ZOO,ARJ,PAK,ARC
+Return stamp    = <empty>
+Return orig     = <empty>
+Code length     = 339
+Data length     = 473
+Num vars        = 10
+Stored vars     = 1
+File length     = hdr(589) + 812 = 1401
+File CRC        = b4610083
+WAQ header CRC  = 78cadb3f
+
+Stored variables:
+    Index   Identifier
+    0       q1
+
+Internal variables:
+    Index   Identifier
+    1       res
+    2       count
+    3       A
+    4       B
+    5       C
+    6       D
+    7       E
+    8       F
+    9       G
+
+Labels:
+    Offset Label
+    0010    @1
+    0047    @2
+    0055    @4
+    005f    @3
+    0080    @6
+    0094    @8
+    00a8    @10
+    00bc    @12
+    00d0    @14
+    00e4    @16
+    00f8    @18
+    0102    @19
+    0102    @17
+    0102    @15
+    0102    @13
+    0102    @11
+    0102    @9
+    0102    @7
+    0105    @5
+    0113    @20
+
+Forward references:
+    Offset  Label
+    000a    @1
+    0050    @5
+    0053    @3
+    0075    @6
+    007e    @7
+    0089    @8
+    0092    @9
+    009d    @10
+    00a6    @11
+    00b1    @12
+    00ba    @13
+    00c5    @14
+    00ce    @15
+    00d9    @16
+    00e2    @17
+    00ed    @18
+    00f6    @19
+    010e    @20
+
+End of map file

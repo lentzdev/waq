@@ -1,0 +1,49 @@
+info("13-04-1992 00:00:00","30-10-1992 01:59:59","2:283/512@fidonet.org","Aardbeving statistiek script");
+store q1;
+intern res, count,
+       A,B,C,D,E,F,G;
+
+{
+        if (read(0) < 0) {
+           puts("Can't open response file\n");
+           quit();
+        }
+
+        A = B = C = D = E = F = G = 0;
+        count = 0;
+        for (res = read(0); res > 0; res = read(1)) {
+            puts("#"); puti(++count); puts("\r");
+            if      (q1 == 'A') A++;
+            else if (q1 == 'B') B++;
+            else if (q1 == 'C') C++;
+            else if (q1 == 'D') D++;
+            else if (q1 == 'E') E++;
+            else if (q1 == 'F') F++;
+            else if (q1 == 'G') G++;
+            else {
+               puts("\nUnknown response ");
+               putc(q1);
+               puts("\n");
+            }
+        }
+
+        if (res < 0)
+           puts("Error reading response file\n");
+        read(-1);
+
+        puts("Total no. responses: "); puti(count);
+        puts("\nA ... Buiten, midden op straat                   : "); puti(A);
+        puts("\nB ... In de kelder                               : "); puti(B);
+        puts("\nC ... Op het dak                                 : "); puti(C);
+        puts("\nD ... In een deuropening                         : "); puti(D);
+        puts("\nE ... Onder een tafel of bed                     : "); puti(E);
+        puts("\nF ... Maakt niet uit, is allemaal even gevaarlijk: "); puti(F);
+        puts("\nG ... Geen idee                                  : "); puti(G);
+        puts("\n");
+
+        quit();
+}
+
+
+/* end of abeefsta.wsc */
+

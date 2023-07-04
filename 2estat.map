@@ -1,0 +1,107 @@
+WAQCOMP version = 1.00
+Format revision = 1
+Sourcefile      = 2estat.i
+Compile stamp   = Sun  2 Jan 1994 15:11:53
+Script name     = 2estat
+Script desc     = 2e Kamer Verkiezingspeiling - statistiek
+Start date      = Mon  1 Nov 1993 00:00:00 GMT/UTC
+End date        = Mon 31 Jan 1994 23:59:59 GMT/UTC
+Return dest     = 2:283/512@fidonet.org
+Arc list        = ZIP,LHarc,LH113,ZOO,ARJ,PAK,ARC
+Return stamp    = <empty>
+Return orig     = <empty>
+Code length     = 495
+Data length     = 524
+Num vars        = 13
+Stored vars     = 1
+File length     = hdr(589) + 1019 = 1608
+File CRC        = 074042a8
+WAQ header CRC  = cc817b64
+
+Stored variables:
+    Index   Identifier
+    0       stem
+
+Internal variables:
+    Index   Identifier
+    1       res
+    2       count
+    3       tmp
+    4       stem_cda
+    5       stem_pvda
+    6       stem_vvd
+    7       stem_d66
+    8       stem_gl
+    9       stem_kr
+    10      stem_sp
+    11      stem_cd
+    12      stem_blanko
+
+Labels:
+    Offset Label
+    001c    @1
+    005f    @2
+    006d    @4
+    0077    @3
+    0098    @6
+    00ac    @8
+    00c0    @10
+    00d4    @12
+    00e8    @14
+    00fc    @16
+    0110    @18
+    0124    @20
+    0135    @22
+    0135    @21
+    0135    @19
+    0135    @17
+    0135    @15
+    0135    @13
+    0135    @11
+    0135    @9
+    0135    @7
+    0138    @5
+    0147    @23
+    01ca    i3
+    01db    @24
+    01ea    @26
+    01ea    @25
+
+Forward references:
+    Offset  Label
+    0016    @1
+    0068    @5
+    006b    @3
+    008d    @6
+    0096    @7
+    00a1    @8
+    00aa    @9
+    00b5    @10
+    00be    @11
+    00c9    @12
+    00d2    @13
+    00dd    @14
+    00e6    @15
+    00f1    @16
+    00fa    @17
+    0105    @18
+    010e    @19
+    0119    @20
+    0122    @21
+    012d    @22
+    0141    @23
+    0155    i3
+    0161    i3
+    016d    i3
+    0179    i3
+    0185    i3
+    0191    i3
+    019d    i3
+    01a9    i3
+    01b5    i3
+    01c4    i3
+    01d3    @24
+    01d9    @25
+    01e4    @26
+
+End of map file

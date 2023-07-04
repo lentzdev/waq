@@ -1,0 +1,8 @@
+Tue Mar 24 20:56:53 CET 1992  Jac Kersing
+
+To compile this package on xenix follow these steps:
+
+- remove the CR characters from all files.
+- remove all ^Z (0x1a) codes at the end of the files
+- move or link makefile.xnx to makefile
+- type make

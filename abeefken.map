@@ -1,0 +1,39 @@
+WAQCOMP version = 1.00
+Format revision = 1
+Sourcefile      = abeefken.i
+Compile stamp   = Mon 13 Apr 1992 20:26:40
+Script name     = abeefken
+Script desc     = Aardbeving kennistest
+Start date      = Mon 13 Apr 1992 00:00:00 GMT/UTC
+End date        = Mon 20 Apr 1992 23:59:59 GMT/UTC
+Return dest     = 2:283/512@fidonet.org
+Arc list        = ZIP,LHarc,LH113,ZOO,ARJ,PAK,ARC
+Return stamp    = <empty>
+Return orig     = <empty>
+Code length     = 88
+Data length     = 492
+Num vars        = 1
+Stored vars     = 1
+File length     = hdr(589) + 580 = 1169
+File CRC        = 9f217339
+WAQ header CRC  = b77dbd7b
+
+Stored variables:
+    Index   Identifier
+    0       q1
+
+Internal variables:
+    NONE
+
+Labels:
+    Offset Label
+    001e    again1
+    003e    @1
+    004b    @2
+
+Forward references:
+    Offset  Label
+    0034    @1
+    003f    @2
+
+End of map file

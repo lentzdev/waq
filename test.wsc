@@ -1,0 +1,32 @@
+	info("01-01-1992 00:00:00","02-01-1992 23:59:59","2:283/512","Test questionnaire");
+	store age, yn;
+
+// Now we can start with the actual script code....
+{
+	cls();
+	puts("This is a sample questionnaire.....\n");
+	puts("Just to test all features in the script language\n");
+	puts("\n");
+
+again0: puts("Do you wish to answer this questionnaire [Y)es/N)o]: ");
+	yn = getc(0);
+	if (yn == 'N') quit();
+	if (yn == 'Y') goto start;
+	puts("\n\'");
+	putc(yn);
+	puts("\'? Please respond with either Y or N....\n");
+	goto again0;
+
+start:	puts("\n");
+again1: puts("What is your age? ");
+	age = getc(0);
+	if (age <= 10) goto less10;
+	if (age >= 80) goto more80;
+	goto again2;
+
+	end();
+}
+
+
+/* end of test.wsc */
+

@@ -1,0 +1,39 @@
+WAQCOMP version = 1.00
+Format revision = 1
+Sourcefile      = 2ekamer.i
+Compile stamp   = Tue  9 Nov 1993 23:55:14
+Script name     = 2ekamer
+Script desc     = 2e Kamer Verkiezingspeiling
+Start date      = Mon  1 Nov 1993 00:00:00 GMT/UTC
+End date        = Fri 31 Dec 1993 23:59:59 GMT/UTC
+Return dest     = 2:283/512@fidonet.org
+Arc list        = ZIP,LHarc,LH113,ZOO,ARJ,PAK,ARC
+Return stamp    = <empty>
+Return orig     = <empty>
+Code length     = 112
+Data length     = 668
+Num vars        = 1
+Stored vars     = 1
+File length     = hdr(589) + 780 = 1369
+File CRC        = e8b9d20c
+WAQ header CRC  = afe1f663
+
+Stored variables:
+    Index   Identifier
+    0       stem
+
+Internal variables:
+    NONE
+
+Labels:
+    Offset Label
+    0033    again_stem
+    0053    @1
+    0060    @2
+
+Forward references:
+    Offset  Label
+    0049    @1
+    0054    @2
+
+End of map file

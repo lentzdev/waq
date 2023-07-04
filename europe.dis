@@ -1,0 +1,135 @@
+WAQDIS Version 1.00; Wide Area Query Disassembler (format revision 1)
+Design & COPYRIGHT (C) 1992 by A.G.Lentz & T.J.Caulfeild; ALL RIGHTS RESERVED
+Wide Area Query - A project of LENTZ SOFTWARE-DEVELOPMENT & EuroBaud Software
+
+europe.waq:
+Format revision = 1
+Compile time    = Fri 10 Apr 1992 17:40:23
+Script name     = europe
+Script desc     = European knowledge
+Start date      = Wed  1 Apr 1992 00:00:00 GMT/UTC
+End date        = Thu 30 Apr 1992 23:59:59 GMT/UTC
+Return dest     = 2:283/512
+Arc list        = <none>
+Return stamp    = <empty>
+Return orig     = <empty>
+Code length     = 264
+Data length     = 834
+Num vars        = 5
+Stored vars     = 5
+File length     = hdr(589) + 1098 = 1687
+File CRC        = cdfa842f
+WAQ header CRC  = ce3d56e2
+
+0000  0a 0c 00  ldai   12    
+0003  23        putc
+0004  24 00 00  puts   [0000]
+0007  24 91 00  puts   [0091]
+000a  0a 00 00  ldai   0     
+000d  20        geti
+000e  0c 00 00  sta    (0)
+0011  0b 00 00  lda    (0)
+0014  08        push
+0015  0a 01 00  ldai   1     
+0018  17        ls
+0019  02 24 00  jnz    0024
+001c  0b 00 00  lda    (0)
+001f  08        push
+0020  0a 05 00  ldai   5     
+0023  18        gt
+0024  01 31 00  jz     0031
+0027  0b 00 00  lda    (0)
+002a  22        puti
+002b  24 9a 00  puts   [009a]
+002e  03 0a 00  jmp    000a
+0031  24 ba 00  puts   [00ba]
+0034  0a 0c 00  ldai   12    
+0037  23        putc
+0038  24 bc 00  puts   [00bc]
+003b  24 91 00  puts   [0091]
+003e  0a 00 00  ldai   0     
+0041  20        geti
+0042  0c 01 00  sta    (1)
+0045  0b 01 00  lda    (1)
+0048  08        push
+0049  0a 01 00  ldai   1     
+004c  17        ls
+004d  02 58 00  jnz    0058
+0050  0b 01 00  lda    (1)
+0053  08        push
+0054  0a 02 00  ldai   2     
+0057  18        gt
+0058  01 65 00  jz     0065
+005b  0b 00 00  lda    (0)
+005e  22        puti
+005f  24 9a 00  puts   [009a]
+0062  03 3e 00  jmp    003e
+0065  24 ba 00  puts   [00ba]
+0068  0a 0c 00  ldai   12    
+006b  23        putc
+006c  24 1f 01  puts   [011f]
+006f  24 91 00  puts   [0091]
+0072  0a 00 00  ldai   0     
+0075  20        geti
+0076  0c 02 00  sta    (2)
+0079  0b 02 00  lda    (2)
+007c  08        push
+007d  0a 01 00  ldai   1     
+0080  17        ls
+0081  02 8c 00  jnz    008c
+0084  0b 02 00  lda    (2)
+0087  08        push
+0088  0a 04 00  ldai   4     
+008b  18        gt
+008c  01 99 00  jz     0099
+008f  0b 00 00  lda    (0)
+0092  22        puti
+0093  24 9a 00  puts   [009a]
+0096  03 72 00  jmp    0072
+0099  24 ba 00  puts   [00ba]
+009c  0a 0c 00  ldai   12    
+009f  23        putc
+00a0  24 cf 01  puts   [01cf]
+00a3  24 91 00  puts   [0091]
+00a6  0a 00 00  ldai   0     
+00a9  20        geti
+00aa  0c 03 00  sta    (3)
+00ad  0b 03 00  lda    (3)
+00b0  08        push
+00b1  0a 01 00  ldai   1     
+00b4  17        ls
+00b5  02 c0 00  jnz    00c0
+00b8  0b 03 00  lda    (3)
+00bb  08        push
+00bc  0a 02 00  ldai   2     
+00bf  18        gt
+00c0  01 cd 00  jz     00cd
+00c3  0b 00 00  lda    (0)
+00c6  22        puti
+00c7  24 9a 00  puts   [009a]
+00ca  03 a6 00  jmp    00a6
+00cd  24 ba 00  puts   [00ba]
+00d0  0a 0c 00  ldai   12    
+00d3  23        putc
+00d4  24 35 02  puts   [0235]
+00d7  24 91 00  puts   [0091]
+00da  0a 00 00  ldai   0     
+00dd  20        geti
+00de  0c 04 00  sta    (4)
+00e1  0b 04 00  lda    (4)
+00e4  08        push
+00e5  0a 01 00  ldai   1     
+00e8  17        ls
+00e9  02 f4 00  jnz    00f4
+00ec  0b 04 00  lda    (4)
+00ef  08        push
+00f0  0a 04 00  ldai   4     
+00f3  18        gt
+00f4  01 01 01  jz     0101
+00f7  0b 00 00  lda    (0)
+00fa  22        puti
+00fb  24 9a 00  puts   [009a]
+00fe  03 da 00  jmp    00da
+0101  24 ba 00  puts   [00ba]
+0104  24 18 03  puts   [0318]
+0107  25        end

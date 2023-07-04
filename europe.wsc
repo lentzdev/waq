@@ -1,0 +1,89 @@
+	info("01-04-1992 00:00:00","31-12-1992 23:59:59","2:283/512","European knowledge");
+	store q1,q2,q3,q4,q5;
+
+{
+	putc(12);
+	puts("Which of the following countries is NOT in the EC ?\n"
+	     "      1  Portugal\n"
+	     "      2  Switzerland\n"
+	     "      3  Luxembourg\n"
+	     "      4  Spain\n"
+	     "      5  Denmark\n"
+	     "\n");
+	puts("Select: ");
+again1: q1 = geti(0);
+	if (q1 < 1 || q1 > 5) {
+	   puti(q1);
+	   puts("? Invalid response, try again: ");
+	   goto again1;
+	}
+	puts("\n");
+
+	putc(12);
+	puts("The President of the European Commission is democratically elected.\n"
+	     "      1  True\n"
+	     "      2  False\n"
+	     "\n");
+	puts("Select: ");
+again2: q2 = geti(0);
+	if (q2 < 1 || q2 > 2) {
+	   puti(q1);
+	   puts("? Invalid response, try again: ");
+	   goto again2;
+	}
+	puts("\n");
+
+	putc(12);
+	puts("Which of the following countries does not have a truly\n"
+	     "representative parliament by EC Standards ?\n"
+	     "      1  France\n"
+	     "      2  Britain\n"
+	     "      3  The Netherlands\n"
+	     "      4  Germany\n"
+	     "\n");
+	puts("Select: ");
+again3: q3 = geti(0);
+	if (q3 < 1 || q3 > 4) {
+	   puti(q1);
+	   puts("? Invalid response, try again: ");
+	   goto again3;
+	}
+	puts("\n");
+
+	putc(12);
+	puts("The European Parliament is directly elected by the citizens of the EC.\n"
+	     "      1  True\n"
+	     "      2  False\n"
+	     "\n");
+	puts("Select: ");
+again4: q4 = geti(0);
+	if (q4 < 1 || q4 > 2) {
+	   puti(q1);
+	   puts("? Invalid response, try again: ");
+	   goto again4;
+	}
+	puts("\n");
+
+	putc(12);
+	puts("Who can send the European Commission home ?\n"
+	      "      1  Noone, we're stuck with them\n"
+	      "      2  The collective parliaments of the EC countries\n"
+	      "      3  The council of ministers of the EC countries\n"
+	      "      4  The European Parliament\n"
+	      "\n");
+	puts("Select: ");
+again5: q5 = geti(0);
+	if (q5 < 1 || q5 > 4) {
+	   puti(q1);
+	   puts("? Invalid response, try again: ");
+	   goto again5;
+	}
+	puts("\n");
+
+	puts("Thank you for answering these questions!\n");
+	end();
+}
+
+
+/* end of europe.wsc */
+

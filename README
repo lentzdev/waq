@@ -1,0 +1,55 @@
+Wide Area Query
+
+These a bits of old code (1992), mainly published for archival reasons, but you
+may still find them useful.
+
+The Wide Area Query system was designed and written by Arjen G. Lentz in
+cooperation with John Caulfeild of EuroBaud Software (Consett, Britain).
+
+
+What does Wide Area Query do, and how?
+
+WAQ was built around a script-language which looks somewhat like C, but the
+input functions are limited to single characters and integer values.
+The code-interpreter software is freely available.  If someone wants to issue
+his own queries, they need to buy the compiler and utilities (disassembler), or
+ask/hire someone who has the compiler to design and write the script for him.
+
+A compiled script can be distributed over a large number of systems which run
+the interpreter software, where users can take part and answer the questions.
+The answers from each user for a particular script are stored in a response
+file, together with a time stamp and an ID derived from the user's name.
+The username can not be reverse engineered from this ID, so a questionaire is
+always really completely anonimous; there are no back doors for a script-author
+to obtain a user's name.  (The algorithm is Message Digest 5 by Donald Rivest.)
+
+Every script has a start and end date, as well as a return address. When the
+end date/time has passed the maintenance program on each system inserts its own
+address into the response file, compresses it, and then calls an external
+utility to get it sent off to the return address.  In for instance FidoNet a
+file-attach message would be created to make the mailer call and send the file.
+
+At the return address, all these response files are first decompressed and then
+merged into a single database.  Records with the same ID (ie. a user answered
+the same questionaire on different systems) are eliminated by only keeping the
+one with the most recent time stamp.The total number of responses can be very
+large.
+
+The range of questions for which one can expect a reasonably accurate outcome
+is of course limited by the public the question is asked.
+For instance, asking the general BBS community how it would vote in a general
+election can be a lot of fun, but of course doesn't reflect the view of the
+real electorate as it is not a representative sample.
+Apart from this fun, there are plenty of questions which can be put before
+BBS users; they are a representative sample of the BBS community.
+
+WAQ can also be used on a single system, or internal within an organisation.
+Numerous applications in education come to mind, but business too.
+
+The WAQ programs were written in C, with special focus on portability.
+The MS-DOS version was compiled with Borland C++ 2.0, but we also successfully
+compiled the same source (with a couple of conditionals, of course) under
+SCO-XENIX.  Chances are good that WAQ can be ported to almost any platform.
+
+
+    -- Enjoy, Arjen (1992, 2023)

@@ -1,0 +1,63 @@
+WAQCOMP version = 1.00
+Format revision = 1
+Sourcefile      = europe.wsc
+Compile stamp   = Tue 21 Jul 1992 00:26:54
+Script name     = europe
+Script desc     = European knowledge
+Start date      = Wed  1 Apr 1992 00:00:00 GMT/UTC
+End date        = Thu 31 Dec 1992 23:59:59 GMT/UTC
+Return dest     = 2:283/512
+Arc list        = ZIP,LHarc,LH113,ZOO,ARJ,PAK,ARC
+Return stamp    = <empty>
+Return orig     = <empty>
+Code length     = 264
+Data length     = 834
+Num vars        = 5
+Stored vars     = 5
+File length     = hdr(589) + 1098 = 1687
+File CRC        = cdfa842f
+WAQ header CRC  = a02c4955
+
+Stored variables:
+    Index   Identifier
+    0       q1
+    1       q2
+    2       q3
+    3       q4
+    4       q5
+
+Internal variables:
+    NONE
+
+Labels:
+    Offset Label
+    000a    again1
+    0024    @1
+    0031    @2
+    003e    again2
+    0058    @3
+    0065    @4
+    0072    again3
+    008c    @5
+    0099    @6
+    00a6    again4
+    00c0    @7
+    00cd    @8
+    00da    again5
+    00f4    @9
+    0101    @10
+
+Forward references:
+    Offset  Label
+    001a    @1
+    0025    @2
+    004e    @3
+    0059    @4
+    0082    @5
+    008d    @6
+    00b6    @7
+    00c1    @8
+    00ea    @9
+    00f5    @10
+
+End of map file

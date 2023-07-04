@@ -1,0 +1,160 @@
+WAQDIS Version 1.00; Wide Area Query Disassembler (format revision 1)
+Design & COPYRIGHT (C) 1992 by A.G.Lentz & T.J.Caulfeild; ALL RIGHTS RESERVED
+Wide Area Query - A project of LENTZ SOFTWARE-DEVELOPMENT & EuroBaud Software
+
+abeefsta.waq:
+Format revision = 1
+Compile time    = Thu 16 Apr 1992 15:35:50
+Script name     = abeefsta
+Script desc     = Aardbeving statistiek script
+Start date      = Mon 13 Apr 1992 00:00:00 GMT/UTC
+End date        = Mon 20 Apr 1992 23:59:59 GMT/UTC
+Return dest     = 2:283/512@fidonet.org
+Arc list        = ZIP,LHarc,LH113,ZOO,ARJ,PAK,ARC
+Return stamp    = <empty>
+Return orig     = <empty>
+Code length     = 339
+Data length     = 473
+Num vars        = 10
+Stored vars     = 1
+File length     = hdr(589) + 812 = 1401
+File CRC        = b4610083
+WAQ header CRC  = 57e07016
+
+0000  0a 00 00  ldai   0     
+0003  2a        read
+0004  08        push
+0005  0a 00 00  ldai   0     
+0008  17        ls
+0009  01 10 00  jz     0010
+000c  24 00 00  puts   [0000]
+000f  26        quit
+0010  0a 00 00  ldai   0     
+0013  0c 09 00  sta    (9)
+0016  0b 09 00  lda    (9)
+0019  0c 08 00  sta    (8)
+001c  0b 08 00  lda    (8)
+001f  0c 07 00  sta    (7)
+0022  0b 07 00  lda    (7)
+0025  0c 06 00  sta    (6)
+0028  0b 06 00  lda    (6)
+002b  0c 05 00  sta    (5)
+002e  0b 05 00  lda    (5)
+0031  0c 04 00  sta    (4)
+0034  0b 04 00  lda    (4)
+0037  0c 03 00  sta    (3)
+003a  0a 00 00  ldai   0     
+003d  0c 02 00  sta    (2)
+0040  0a 00 00  ldai   0     
+0043  2a        read
+0044  0c 01 00  sta    (1)
+0047  0b 01 00  lda    (1)
+004a  08        push
+004b  0a 00 00  ldai   0     
+004e  18        gt
+004f  01 05 01  jz     0105
+0052  03 5f 00  jmp    005f
+0055  0a 01 00  ldai   1     
+0058  2a        read
+0059  0c 01 00  sta    (1)
+005c  03 47 00  jmp    0047
+005f  24 1a 00  puts   [001a]
+0062  06 02 00  inc    (2)
+0065  0b 02 00  lda    (2)
+0068  22        puti
+0069  24 1c 00  puts   [001c]
+006c  0b 00 00  lda    (0)
+006f  08        push
+0070  0a 41 00  ldai   65    
+0073  1b        eq
+0074  01 80 00  jz     0080
+0077  0b 03 00  lda    (3)
+007a  06 03 00  inc    (3)
+007d  03 02 01  jmp    0102
+0080  0b 00 00  lda    (0)
+0083  08        push
+0084  0a 42 00  ldai   66    
+0087  1b        eq
+0088  01 94 00  jz     0094
+008b  0b 04 00  lda    (4)
+008e  06 04 00  inc    (4)
+0091  03 02 01  jmp    0102
+0094  0b 00 00  lda    (0)
+0097  08        push
+0098  0a 43 00  ldai   67    
+009b  1b        eq
+009c  01 a8 00  jz     00a8
+009f  0b 05 00  lda    (5)
+00a2  06 05 00  inc    (5)
+00a5  03 02 01  jmp    0102
+00a8  0b 00 00  lda    (0)
+00ab  08        push
+00ac  0a 44 00  ldai   68    
+00af  1b        eq
+00b0  01 bc 00  jz     00bc
+00b3  0b 06 00  lda    (6)
+00b6  06 06 00  inc    (6)
+00b9  03 02 01  jmp    0102
+00bc  0b 00 00  lda    (0)
+00bf  08        push
+00c0  0a 45 00  ldai   69    
+00c3  1b        eq
+00c4  01 d0 00  jz     00d0
+00c7  0b 07 00  lda    (7)
+00ca  06 07 00  inc    (7)
+00cd  03 02 01  jmp    0102
+00d0  0b 00 00  lda    (0)
+00d3  08        push
+00d4  0a 46 00  ldai   70    
+00d7  1b        eq
+00d8  01 e4 00  jz     00e4
+00db  0b 08 00  lda    (8)
+00de  06 08 00  inc    (8)
+00e1  03 02 01  jmp    0102
+00e4  0b 00 00  lda    (0)
+00e7  08        push
+00e8  0a 47 00  ldai   71    
+00eb  1b        eq
+00ec  01 f8 00  jz     00f8
+00ef  0b 09 00  lda    (9)
+00f2  06 09 00  inc    (9)
+00f5  03 02 01  jmp    0102
+00f8  24 1e 00  puts   [001e]
+00fb  0b 00 00  lda    (0)
+00fe  23        putc
+00ff  24 31 00  puts   [0031]
+0102  03 55 00  jmp    0055
+0105  0b 01 00  lda    (1)
+0108  08        push
+0109  0a 00 00  ldai   0     
+010c  17        ls
+010d  01 13 01  jz     0113
+0110  24 33 00  puts   [0033]
+0113  0a ff ff  ldai   -1    
+0116  2a        read
+0117  24 50 00  puts   [0050]
+011a  0b 02 00  lda    (2)
+011d  22        puti
+011e  24 66 00  puts   [0066]
+0121  0b 03 00  lda    (3)
+0124  22        puti
+0125  24 9b 00  puts   [009b]
+0128  0b 04 00  lda    (4)
+012b  22        puti
+012c  24 d0 00  puts   [00d0]
+012f  0b 05 00  lda    (5)
+0132  22        puti
+0133  24 05 01  puts   [0105]
+0136  0b 06 00  lda    (6)
+0139  22        puti
+013a  24 3a 01  puts   [013a]
+013d  0b 07 00  lda    (7)
+0140  22        puti
+0141  24 6f 01  puts   [016f]
+0144  0b 08 00  lda    (8)
+0147  22        puti
+0148  24 a4 01  puts   [01a4]
+014b  0b 09 00  lda    (9)
+014e  22        puti
+014f  24 31 00  puts   [0031]
+0152  26        quit
